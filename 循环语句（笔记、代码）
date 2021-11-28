@@ -1,0 +1,178 @@
+二、循环语句
+1.while                 statement（语句）（死dei的蒙t）
+y：while(表达式)
+          循环语句；
+break:（不ruai可）在循环中只要遇到break，就停止后期的所有的循环，直接终止循环。while中的break是用于永久终止循环的。
+continue：（肯踢扭）是用于终止本次循环的，也就是本次循环中continue后边的代码不会再执行，而是直接跳转到while语句的判断部分。进行下一次循环的入口判断。
+
+getchar：输入（接收）一个字符
+putchar：输出（输入）一个字符（输出字符跟printf（“%c”）一样）
+{
+     int ch = 0;              //初始化
+        //ctrl + z（输入EOF）
+        //EOF: end of file (-1) 文件结束标志                   //判断
+     while((ch=getchar()) !=EOF)  //getchar()获取一个字符到ch不等于EOF就打印
+     {
+               putchar(ch);                               //调整
+     }
+}
+
+scanf（“%s”，password）；缓冲区还剩一个\n
+getchar（）；
+printf（）
+ret = getchar（）；
+
+while （（ch = getchar（）） != '\n' ）
+{
+       ;
+}
+
+|| 逻辑或
+
+
+
+
+
+
+
+2.for
+for   //初始化           //判断              //调整 
+for(条件表达式一； 条件表达式二； 条件表达式三)
+{
+      语句；
+}
+for语句的循环变量控制
+1.不可在for循环体内修改循环变量，防止for循环失去控制。
+2.建议for语句的循环控制变量的取值采用“铅笔后开区间”写法。
+
+for循环的变种
+变种1
+for（；；）
+for循环的初始化、调整、判断都可以省略
+但是：for循环的判断部分如果被省略，那判断条件就是：恒为真
+变种2
+int  x， y；
+for （x = 0 , y = 0;  x < 2 && y < 5; ++x, y++）
+&&并且
+
+
+
+
+//Variants two of the for 
+//int main()
+//{
+//	int x, y;
+//	for (x = 0, y = 0; x < 2 && y < 5; ++x, y++)
+//	{
+//		printf("hehe\n");b
+//	}
+//	return 0;
+//}
+
+//Variants one of the for loop
+//int main()
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		for (j = 0; j < 10; j++)
+//		{
+//			printf("hehe\n");
+//		}
+//	}
+//	return 0;
+//}
+
+//Loop variables cannot be modified inside a for loop
+//int main()
+//{
+//	int i = 0;
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (i = 5)
+//		{
+//			printf("7\n");
+//		}
+//		printf("%d\n", arr[i]);
+//	}
+//	return 0;
+//}
+
+//Use of for loop
+//int main()
+//{
+//	int i = 0;
+//	    //初始化；判断；调整
+//	for (i = 1; i < 10; i++)
+//	{
+//		printf("%d", i);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch>'9')
+//			continue;
+//		putchar(ch);
+//	}
+//	return 0;
+//}
+
+
+//Use of while ((ch = getchar()) != '\n')
+//int main()
+//{
+//	int ret = 0;
+//	int ch = 0;
+//	char password[20] = { 0 };
+//	printf("请输入密码:>");
+//	scanf("%s", password);  
+//	printf("请确认(Y/N):>");
+//	while ((ch = getchar()) != '\n')  //接收掉多余的字符
+//	{
+//		;
+//	}
+//	ret = getchar();
+//	if (ret == 'Y')
+//	{
+//		printf("确认成功");
+//	}
+//	else
+//	{
+//		printf("放弃确认");
+//	}
+//	return 0;
+//}
+
+
+//Use of getchar and putchar 
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch=getchar()) != EOF)
+// //EOF:End of file flag(-1)
+//	{
+//		putchar(ch);
+//	}
+//	return 0;
+//}
+
+//Use of continue
+//int main()
+//{
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		i++;
+//		if (i == 5)
+//			continue;
+//		printf("%d\n",i);
+//	}
+//	return 0;
+//}
