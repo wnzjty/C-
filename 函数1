@@ -1,0 +1,42 @@
+int main()
+{
+	char arr1[] = "12345";
+	char arr2[20] = "##########";
+	strcpy(arr2, arr1);
+	printf("%s\n",arr2);
+	return 0;
+}
+
+函数
+一、函数是什么
+在计算机科学中，子程序（函数）（英语：subroutine,procedure,function,routine,method,subprogram,callable unit),是一个大型程序中的莫部分代码，有一个或多个语句块组成。她负责完成某项特定任务，而且相较于其他代码，具备相对的独立性。
+
+一般会有输入参数并且有返回值，提供对过程的封装和细节的隐藏。这些代码通常被集成为软件库。
+
+C语言中函数的分类
+二、库函数
+什么是库函数
+为什么会有库函数（microsoft Docs）菜鸟教程 www.cplusplus.com
+常用库函数有：
+IO函数    输入输出函数
+字符串操作函数
+字符操作函数
+内存操作函数
+时间/日期函数
+数学函数
+其他库函数
+strlen - string length - 字符串长度有关
+strcpy - string copy 拷贝
+/0字符串结束标志
+
+三、自定义函数
+
+四、函数参数
+
+五、函数调用
+
+六、函数的嵌套调用和链式访问
+
+七、函数的声明和定义
+
+八、函数递归
