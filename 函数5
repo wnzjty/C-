@@ -1,0 +1,81 @@
+迭代：goto语句 循环
+
+阶乘：一个正整数的阶乘（factorial）是所有小于及等于该数的正整数的积，并且0的阶乘为1。自然数n的阶乘写作n!。1808年，基斯顿·卡曼引进这个表示法。
+亦即n!=1×2×3×...×(n-1)×n。阶乘亦可以递归方式定义：0!=1，n!=(n-1)!×n。
+斐波拉契数列：前两个数之和等于第三个数
+1 1 2 3 5 8 13 21
+TDD - 测试驱动开发
+汉诺塔问题
+青蛙跳台阶问题
+剑指offer
+
+Fiboracci
+int Fib2(int n)
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+
+int count = 0;
+int Fib1(int n)
+{
+	if (n == 5)
+		count++;
+	if (n <= 2)
+		return 1;
+	else
+		return Fib(n - 1) + Fib(n - 2);
+}
+
+int main()
+{
+lxy:printf("");
+	int n = 0;
+	scanf("%d", &n);
+	int ret = Fib2(n);
+	printf("%d\n",ret);
+	goto lxy;
+	//printf("%d\n",count);
+	return 0;
+}
+
+Factorial
+int Fac1(int n)
+{
+	int i = 0;
+	int ret = 1;
+	for (i = 1; i <= n; i++)
+	{
+		ret *= i;
+	}
+	return ret;
+}
+
+int Fac2(int n)
+{
+	if (n <= 1)
+	{
+		return n;
+	}
+	else
+		return n * Fac2(n - 1);
+}
+
+int main()
+{
+	int n = 0;
+	int ret = 0;
+	scanf("%d", &n);
+	ret = Fac2(n);
+	printf("%d\n", ret);
+	return 0;
+}
