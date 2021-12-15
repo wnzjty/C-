@@ -1,0 +1,36 @@
+void game()
+{
+	;
+}
+
+void menu()
+{
+	printf("***###                                 ###***\n");
+	printf("  #########################################\n");
+	printf(" ######   1.play  0.exit  2.Recharge   #####\n");
+	printf("  #########################################\n");
+}
+
+int main()
+{
+	menu();
+	int input = 0;
+	scanf("%d\n", &input);
+	printf("请输入>:");
+	do
+		switch(input)
+		{
+		case 1:
+			game();
+		case 2:
+			printf("给爷爬\n");
+			break;
+		default:
+			printf("输入错误，请重新输入\n");
+		}
+	while (input);
+	{
+		;
+	}
+	return 0;
+}
